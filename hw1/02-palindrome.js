@@ -2,11 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded event fired'); // Debugging
 
     const numberInput = document.getElementById('numberInput');
-    const checkPalindromeBtn = document.getElementById('checkPalindromeBtn');
     const resultParagraph = document.getElementById('result');
 
-    checkPalindromeBtn.addEventListener('click', () => {
-
+    numberInput.addEventListener('input', () => {
         const inputValue = parseInt(numberInput.value, 10);
 
         if (isNaN(inputValue) || inputValue < 0) {
@@ -29,8 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function isPalindrome(number) {
         let reversed = number.split('').reverse().join('');
         return number === reversed;
-
-
-        
     }
 });
