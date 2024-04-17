@@ -1,29 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded event fired'); // Debugging
-
-    const numberInput = document.getElementById('numberInput');
-    const resultParagraph = document.getElementById('result');
-
-    numberInput.addEventListener('input', () => {
-        const inputValue = parseInt(numberInput.value, 10);
-
+    const elem = document.querySelector("#numberInput");
+    const resultDiv = document.querySelector(".result");
+    elem.addEventListener('input', () => {
+        const inputValue = parseInt(elem.value, 10);
         if (isNaN(inputValue) || inputValue < 0) {
-            resultParagraph.textContent = 'Please enter a positive number.';
-            resultParagraph.classList.add('text-danger');
+            resultDiv.textContent = 'Please enter a positive number.';
+            resultDiv.style.color = 'red';
             return;
         }
-
         if (isPalindrome(inputValue.toString())) {
-            resultParagraph.textContent = `Yes. This is a palindrome!`;
-            resultParagraph.classList.remove('text-danger');
-            resultParagraph.classList.add('text-success');
+            resultDiv.textContent = `Yes. This is a palindrome!`;
+            resultDiv.style.color = 'green';
         } else {
-            resultParagraph.textContent = `No. Try again`;
-            resultParagraph.classList.remove('text-success');
-            resultParagraph.classList.add('text-danger');
-        }
+            resultDiv.textContent = `No. Try again`;
+            resultDiv.style.color = 'red';
+        }        
     });
-
     function isPalindrome(number) {
         let reversed = number.split('').reverse().join('');
         return number === reversed;
