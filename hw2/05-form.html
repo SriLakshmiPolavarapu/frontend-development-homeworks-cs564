@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>05 - Form</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
     <script defer src="05-form.js"></script>
-  </head>
-  <body>
-    <main>
-      <form>
+</head>
+<body class="bg-primary">
+    <main class="container p-4 mt-5 bg-white w-50">
         <h1>Exercise 05 - Form</h1>
-      </form>
+        <form id="userForm">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Full Name:</label>
+                <input type="text" id="nameInput" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="emailInput" class="form-label">Email:</label>
+                <input type="email" id="emailInput" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="departmentSelect" class="form-label">Registration Status:</label>
+              <select id="departmentSelect" class="form-select">
+                  <option selected disabled>Choose an option</option>
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                  <option value="dont know">don't know</option>
+              </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-check-label" for="notificationCheckbox">Have you taken any of the following courses?</label>
+            <div class>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="option1" value="option1">
+                    <label class="form-check-label" for="option1">
+                        Programming Languages
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="option2" value="option2">
+                    <label class="form-check-label" for="option2">
+                        Operating System
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="option3" value="option3">
+                    <label class="form-check-label" for="option3">
+                        Full Stack Web Development
+                    </label>
+                </div>
+            </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="messageInput" class="form-label">Anything else:</label>
+                <textarea id="messageInput" class="form-control" rows="4"></textarea>
+            </div>
+            </div class="mb-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
     </main>
-  </body>
+</body>
 </html>
