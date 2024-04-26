@@ -2,7 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let intervalId;
     let isRunning = false;
     let intervalSeconds = 3;
-    const fixedColors = ['red', 'green', 'blue', 'yellow', 'purple', 'cyan'];
+    //const fixedColors = ['red', 'green', 'blue', 'yellow', 'purple', 'cyan'];
+    const fixedColors = [
+        "hsla(278, 35%, 18%, 0.5)",
+    "hsla(337, 100%, 29%, 0.5)",
+    "hsla(338, 100%, 24%, 0.5)",
+    "hsla(208, 97%, 27%, 0.5)",
+    "hsla(209, 100%, 22%, 0.5)",
+      ];
     let currentColorIndex = 0;
 
     function setBackgroundColor(color) {
