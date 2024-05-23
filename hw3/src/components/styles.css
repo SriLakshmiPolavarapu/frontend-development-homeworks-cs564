@@ -1,0 +1,41 @@
+/* Home */
+
+.home{
+  color: red;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.home h1{
+  font-size: 5em;
+}
+
+.country{
+  font-size: 1.5em;
+}
+
+.country-head{
+  color:blueviolet;
+}
+
+.country-info{
+  color:rgb(44, 3, 252);
+}
+
+.country-box{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color:rgb(195, 171, 219);
+}
+
+.population-head{
+  font-size: 2em;
+  color:orangered;
+}
+
+.custom-head{
+  font-size: 2em;
+  color:blue;
+}
